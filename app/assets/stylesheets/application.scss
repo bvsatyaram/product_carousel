@@ -1,7 +1,11 @@
-@import "bootstrap-sprockets",
+@import "theme",
+        "bootstrap-sprockets",
+        "bootstratp_variables_overrides",
         "bootstrap",
         "jquery-ui/core",
-        "jquery-ui/autocomplete",
         "jquery-ui/theme",
+        "jquery-ui/autocomplete",
+        "jquery-ui/selectmenu",
+        "jquery-ui",
         "common",
         "carousel";

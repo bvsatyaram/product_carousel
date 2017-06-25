@@ -5,3 +5,45 @@
     margin: 2rem 0 5rem;
   }
 }
+
+#carousel-items-list {
+  ul.media-list {
+    background-color: $light-bg-color;
+    border: 1px solid $thin-border-color;
+
+    li.media {
+      border-bottom: 1px solid $thin-border-color;
+      padding: 2rem 1rem;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+ul.ui-widget-content.ui-autocomplete {
+  padding-left: 0;
+
+  li.ui-menu-item {
+    color: $lighter-dark-font-color;
+    background-color: $light-bg-color;
+    list-style-type: none;
+    margin: 0;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $white;
+    }
+
+    .ui-menu-item-wrapper {
+      &, &:hover {
+        background-color: transparent;
+        border: none;
+        color: inherit;
+      }
+    }
+  }
+}

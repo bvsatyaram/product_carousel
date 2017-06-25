@@ -1,7 +1,7 @@
 $ ->
   $( "#product-search-box" ).autocomplete
-    source: "/shopify_products/",
-    minLength: 2,
+    source: "/shopify_products/"
+    minLength: 2
     select: ( event, ui ) ->
       $.post(
         '/carousel_items',
