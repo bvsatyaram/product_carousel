@@ -12,6 +12,7 @@ class CarouselController < ApplicationController
 private
   def fetch_carousel_items
     shop = Shop.first
-    @carousel_items = shop.carousel_products
+    @carousel_products = shop.carousel_products
+    @grouped_carousel_items = CarouselItem.all.group_by(&:shopify_product_id)
   end
 end

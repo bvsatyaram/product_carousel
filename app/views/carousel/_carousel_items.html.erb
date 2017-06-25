@@ -1,14 +1,15 @@
 <ul class="media-list" id="carousel-items">
-  <% carousel_items.each do |ci| %>
+  <% carousel_products.each do |cp| %>
     <li class="media">
       <div class="media-left">
         <a href="#">
-          <img class="media-object" src="<%= shopify_product_image(ci, true) %>" alt="<%= ci.title %>">
+          <img class="media-object" src="<%= shopify_product_image(cp, true) %>" alt="<%= cp.title %>">
         </a>
       </div>
       <div class="media-body">
-        <h4 class="media-heading"><%= ci.title %></h4>
-        Type: <em><%= ci.product_type %></em>
+        <%= link_to "Delete", carousel_item_path(grouped_carousel_items[cp.id.to_s]), class: "pull-right text-danger", method: :delete, remote: true %>
+        <h4 class="media-heading"><%= cp.title %></h4>
+        Type: <em><%= cp.product_type %></em>
       </div>
     </li>
   <% end %>

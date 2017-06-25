@@ -4,10 +4,10 @@
   <input class="form-control" id="product-search-box" type="text" placeholder="Search for a product to add to carousel...">
 
   <div id="carousel-items-list">
-    <% if @carousel_items.empty? %>
+    <% if @carousel_products.empty? %>
       <%= render 'carousel/empty_carousel_items_alert' %>
     <% else %>
-      <%= render 'carousel/carousel_items', carousel_items: @carousel_items %>
+      <%= render partial: 'carousel/carousel_items', locals: {carousel_products: @carousel_products, grouped_carousel_items: @grouped_carousel_items} %>
     <% end %>
   </div>
 </div>
