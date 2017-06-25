@@ -11,11 +11,11 @@
   <body>
     <div class="container">
       <ul class="nav nav-pills">
-        <li role="presentation" class="active">
-          <%= link_to "Preview Carousel", root_path %>
+        <li role="presentation" class="<%= @active_tab == :preview ? 'active' : '' %>">
+          <%= link_to "Preview Carousel", preview_path %>
         </li>
-        <li role="presentation">
-          <%= link_to "Configure Carousel", root_path %>
+        <li role="presentation" class="<%= @active_tab == :configure ? 'active' : '' %>">
+          <%= link_to "Configure Carousel", configure_path %>
         </li>
       </ul>
       <%= yield %>

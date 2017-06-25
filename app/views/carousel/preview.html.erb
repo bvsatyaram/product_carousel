@@ -1,0 +1,11 @@
+<% if @carousel_items.any? %>
+  <p><%= @carousel_items.inspect %></p>
+<% else %>
+  <div class="jumbotron">
+    <h1>Welcome!</h1>
+    <p>
+      Once you configure the products to be shown in the carousel, you will see a preview of the carousel here.
+    </p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Configure Carousel</a></p>
+  </div>
+<% end %>
