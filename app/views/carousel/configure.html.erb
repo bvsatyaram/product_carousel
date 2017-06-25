@@ -1,8 +1,11 @@
 <h1>Products to show</h1>
 
+<input class="form-control" id="product-search-box" type="text" placeholder="Search for a product to add to carousel...">
+
 <% if @carousel_items.any? %>
-  <ul class="list-group">
+  <ul class="list-group" id="carousel-items">
     <% @carousel_items.each do |ci| %>
+      <li class="list-group-item"><%= ci.inspect %></li>
     <% end %>
   </ul>
 <% else %>
