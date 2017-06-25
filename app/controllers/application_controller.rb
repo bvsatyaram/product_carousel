@@ -8,4 +8,8 @@ protected
     raise InvalidTabActivated unless allowed_tabs.include?(tab_identifier)
     @active_tab = tab_identifier
   end
+
+  def current_shop
+    @current_shop ||= Shop.find_by(shopify_domain: current_shopify_domain)
+  end
 end

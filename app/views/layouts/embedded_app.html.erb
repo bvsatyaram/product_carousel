@@ -13,7 +13,17 @@
     <div class="app-wrapper">
       <div class="app-content">
         <main role="main">
-          <%= yield %>
+          <div class="container">
+            <ul class="nav nav-pills">
+              <li role="presentation" class="<%= @active_tab == :preview ? 'active' : '' %>">
+                <%= link_to "Preview Carousel", admin_preview_path %>
+              </li>
+              <li role="presentation" class="<%= @active_tab == :configure ? 'active' : '' %>">
+                <%= link_to "Configure Carousel", admin_configure_path %>
+              </li>
+            </ul>
+            <%= yield %>
+          </div>
         </main>
       </div>
     </div>

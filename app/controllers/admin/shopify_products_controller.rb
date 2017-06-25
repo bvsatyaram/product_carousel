@@ -1,6 +1,6 @@
-class Admin::ShopifyProductsController < ApplicationController
+class Admin::ShopifyProductsController < ShopifyApp::AuthenticatedController
   def index
-    products = Shop.first.all_products
+    products = current_shop.all_products
 
     processed_products = []
     if params[:term]

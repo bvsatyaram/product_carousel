@@ -4,6 +4,8 @@ class Shop < ActiveRecord::Base
 
   PRODUCT_FIELDS = [:id, :title, :images, :product_type]
 
+  has_many :carousel_items
+
   def all_products
     self.with_shopify_session do
       @all_products = Rails.cache.fetch(product_cache_name(:all)) do
@@ -15,9 +17,9 @@ class Shop < ActiveRecord::Base
   end
 
   def carousel_products
-    product_ids = CarouselItem.pluck(:shopify_product_id).join(",")
+    product_ids = self.carousel_items.pluck(:shopify_product_id).join(",")
     return [] if product_ids.empty?
-    
+
     self.with_shopify_session do
       @carousel_products = Rails.cache.fetch(product_cache_name(:carousel)) do
         ShopifyAPI::Product.find(:all, params: {ids: product_ids, limit: 250, fields: PRODUCT_FIELDS})
