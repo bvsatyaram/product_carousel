@@ -1,2 +1,14 @@
-<h1>Carousel#configure</h1>
-<p>Find me in app/views/carousel/configure.html.erb</p>
+<h1>Products to show</h1>
+
+<% if @carousel_items.any? %>
+  <ul class="list-group">
+    <% @carousel_items.each do |ci| %>
+    <% end %>
+  </ul>
+<% else %>
+  <div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <strong>No Products Added</strong><br>
+    Please search for products below to add them to the carousel.
+  </div>
+<% end %>
