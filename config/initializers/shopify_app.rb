@@ -4,4 +4,7 @@ ShopifyApp.configure do |config|
   config.secret = ENV['SHOPIFY_API_SECRET']
   config.scope = "read_orders, read_products, write_script_tags"
   config.embedded_app = true
+  config.scripttags = [
+    {event: 'onload', src: 'https://b5b4c70a.ngrok.io/script-tags/carousel-mounter.js'}
+  ]
 end
