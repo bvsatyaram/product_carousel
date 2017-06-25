@@ -11,6 +11,7 @@ class CarouselController < ApplicationController
 
 private
   def fetch_carousel_items
-    @carousel_items = CarouselItem.all
+    shop = Shop.first
+    @carousel_items = shop.carousel_products
   end
 end

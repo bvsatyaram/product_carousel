@@ -10,7 +10,8 @@ $ ->
             shopify_product_id: ui.item.id
             product_title: ui.item.value
         },
-        (res) ->
-          $('#carousel-items').append("<li class='list-group-item'>" + res.product.name + "</li>");
+        ((res) ->
+          $('#carousel-items-list').html(res.carousel_items_content);
           $('input#product-search-box').val('');
+        )
       )

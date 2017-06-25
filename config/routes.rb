@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get '/carousel/configure', to: 'carousel#configure', as: 'configure'
 
   resources :shopify_products, only: [:index]
-  resources :carousel_items, only: [:index]
+  resources :carousel_items, only: [:index, :create]
   root :to => 'carousel#preview'
   mount ShopifyApp::Engine, at: '/'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

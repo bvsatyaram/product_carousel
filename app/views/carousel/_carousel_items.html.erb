@@ -1,0 +1,15 @@
+<ul class="media-list" id="carousel-items">
+  <% carousel_items.each do |ci| %>
+    <li class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="<%= shopify_product_image(ci, true) %>" alt="<%= ci.title %>">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading"><%= ci.title %></h4>
+        Type: <em><%= ci.product_type %></em>
+      </div>
+    </li>
+  <% end %>
+</ul>

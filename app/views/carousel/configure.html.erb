@@ -1,17 +1,13 @@
-<h1>Products to show</h1>
+<div id="configure-carousel">
+  <h1>Products to show</h1>
 
-<input class="form-control" id="product-search-box" type="text" placeholder="Search for a product to add to carousel...">
+  <input class="form-control" id="product-search-box" type="text" placeholder="Search for a product to add to carousel...">
 
-<% if @carousel_items.any? %>
-  <ul class="list-group" id="carousel-items">
-    <% @carousel_items.each do |ci| %>
-      <li class="list-group-item"><%= ci.inspect %></li>
+  <div id="carousel-items-list">
+    <% if @carousel_items.empty? %>
+      <%= render 'carousel/empty_carousel_items_alert' %>
+    <% else %>
+      <%= render 'carousel/carousel_items', carousel_items: @carousel_items %>
     <% end %>
-  </ul>
-<% else %>
-  <div class="alert alert-warning alert-dismissible" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <strong>No Products Added</strong><br>
-    Please search for products below to add them to the carousel.
   </div>
-<% end %>
+</div>
