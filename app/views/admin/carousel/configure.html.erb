@@ -5,9 +5,9 @@
 
   <div id="carousel-items-list">
     <% if @carousel_products.empty? %>
-      <%= render 'carousel/empty_carousel_items_alert' %>
+      <%= render 'admin/carousel/empty_carousel_items_alert' %>
     <% else %>
-      <%= render partial: 'carousel/carousel_items', locals: {carousel_products: @carousel_products, grouped_carousel_items: @grouped_carousel_items} %>
+      <%= render partial: 'admin/carousel/carousel_items', locals: {carousel_products: @carousel_products, grouped_carousel_items: @grouped_carousel_items} %>
     <% end %>
   </div>
 </div>

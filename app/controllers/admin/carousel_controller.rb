@@ -1,4 +1,4 @@
-class CarouselController < ApplicationController
+class Admin::CarouselController < ApplicationController
   before_action :fetch_carousel_items
 
   def preview

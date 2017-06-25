@@ -1,4 +1,4 @@
-class ShopifyProductsController < ApplicationController
+class Admin::ShopifyProductsController < ApplicationController
   def index
     products = Shop.first.all_products
 

@@ -1,5 +1,0 @@
-<% if @carousel_products.any? %>
-  $('#carousel-items-list').html('<%= j render(partial: "carousel/carousel_items", locals: {carousel_products: @carousel_products, grouped_carousel_items: @grouped_carousel_items}) %>');
-<% else %>
-$('#carousel-items-list').html('<%= j render(partial: "carousel/empty_carousel_items_alert") %>');
-<% end %>

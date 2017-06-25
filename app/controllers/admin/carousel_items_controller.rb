@@ -1,4 +1,4 @@
-class CarouselItemsController < ApplicationController
+class Admin::CarouselItemsController < ApplicationController
   before_action :fetch_shop
 
   def index

@@ -1,10 +1,10 @@
 $ ->
   $( "#product-search-box" ).autocomplete
-    source: "/shopify_products/"
+    source: "/admin/shopify_products/"
     minLength: 2
     select: ( event, ui ) ->
       $.post(
-        '/carousel_items',
+        '/admin/carousel_items',
         {
           carousel_item:
             shopify_product_id: ui.item.id

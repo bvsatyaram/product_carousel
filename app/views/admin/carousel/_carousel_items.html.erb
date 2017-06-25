@@ -7,7 +7,7 @@
         </a>
       </div>
       <div class="media-body">
-        <%= link_to "Delete", carousel_item_path(grouped_carousel_items[cp.id.to_s]), class: "pull-right text-danger", method: :delete, remote: true %>
+        <%= link_to "Delete", admin_carousel_item_path(grouped_carousel_items[cp.id.to_s]), class: "pull-right text-danger", method: :delete, remote: true %>
         <h4 class="media-heading"><%= cp.title %></h4>
         Type: <em><%= cp.product_type %></em>
       </div>
