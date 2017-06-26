@@ -25,11 +25,6 @@
     selector: '.toptal-product-slider',
     proxyUri: '/a/slides/',
     loadCarouselStyles: function() {
-      // $("<link/>", {
-      //   rel: "stylesheet",
-      //   type: "text/css",
-      //   href: "//b5b4c70a.ngrok.io/script-tags/assets/css/carousel-styler.css"
-      // }).appendTo($("head"));
       $('<link>').attr({
         rel:  "stylesheet",
         type: "text/css",
