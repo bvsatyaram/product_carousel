@@ -139,7 +139,7 @@
       new Slider('.toptal-product-slider .slider');
     },
     init: function() {
-      $(this.selector).html('<h1>Loading Carousel...</h1>');
+      $(this.selector).html('<p>Loading Carousel...</p>');
       this.loadCarouselStyles();
       this.getSlides();
     }
