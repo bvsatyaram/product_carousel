@@ -2,7 +2,7 @@ class Shop < ActiveRecord::Base
   include ShopifyApp::Shop
   include ShopifyApp::SessionStorage
 
-  PRODUCT_FIELDS = [:id, :title, :images, :product_type]
+  PRODUCT_FIELDS = [:id, :title, :images, :product_type, :handle]
 
   has_many :carousel_items
 
