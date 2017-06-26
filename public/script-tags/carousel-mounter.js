@@ -50,9 +50,17 @@
       var sliderIndex = 0;
       response.slides.forEach(function(slide) {
         var slideDiv = $('<div>').addClass('slide');
+        var infoDiv = $('<div>').addClass('slide-info');
+        infoDiv.append(
+          $('<p>').addClass('product-title').html(slide.title)
+        ).append(
+          $('<p>').addClass('product-type').html(slide.product_type)
+        ).append(
+          $('<a>').attr('href', '/products/' + slide.handle).html('Buy Now')
+        );
         slideDiv.append(
           $('<img>').attr('src', slide.image)
-        ).append(
+        ).append(infoDiv).append(
           $('<p>').addClass('caption').html(slide.title)
         );
         slideDiv.appendTo(sliderWrapper);
@@ -138,7 +146,9 @@
   }
 
   var carouselMounter = function($){
-    Carousel.init();
+    if ($('.toptal-product-slider').length > 0) {
+      Carousel.init();
+    }
   };
 
   if ((typeof jQuery === 'undefined') || (parseInt(jQuery.fn.jquery) === 1 && parseFloat(jQuery.fn.jquery.replace(/^1\./,'')) < 7.1)) {

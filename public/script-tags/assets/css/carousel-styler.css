@@ -27,8 +27,29 @@
 .toptal-product-slider .slide img {
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 2em;
   max-height: 300px;
+}
+
+.toptal-product-slider .slide .slide-info {
+  position: absolute;
+  top: 0;
+  right: 2em;
+  text-align: right;
+}
+
+.toptal-product-slider .slide .slide-info p.product-title {
+  font-size: 4em;
+}
+
+.toptal-product-slider .slide .slide-info p.product-type {
+  font-size: 3em;
+  font-style: italic;
+}
+
+.toptal-product-slider .slide .slide-info a {
+  border: 1px solid #333;
+  padding: 0.4em 1.6em;
 }
 
 .toptal-product-slider .caption {
