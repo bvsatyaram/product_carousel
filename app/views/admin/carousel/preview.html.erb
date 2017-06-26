@@ -1,5 +1,5 @@
 <% if @carousel_products.any? %>
-  <p><%= @carousel_products.inspect %></p>
+  <div class="toptal-product-slider" data-shopify-domain="<%= current_shop.shopify_domain %>"></div>
 <% else %>
   <div class="jumbotron">
     <h1>Welcome!</h1>
