@@ -4,7 +4,7 @@ class Shop < ActiveRecord::Base
 
   PRODUCT_FIELDS = [:id, :title, :images, :product_type, :handle]
 
-  has_many :carousel_items
+  has_many :carousel_items, dependent: :destroy
 
   def all_products
     self.with_shopify_session do

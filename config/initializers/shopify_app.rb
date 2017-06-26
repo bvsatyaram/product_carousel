@@ -7,4 +7,7 @@ ShopifyApp.configure do |config|
   config.scripttags = [
     {event: 'onload', src: 'https://b5b4c70a.ngrok.io/script-tags/carousel-mounter.js'}
   ]
+  config.webhooks = [
+    {topic: 'products/create', address: 'https://b5b4c70a.ngrok.io/webhooks/products_create', format: 'json'},
+  ]
 end
